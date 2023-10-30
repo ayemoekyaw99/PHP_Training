@@ -23,11 +23,11 @@
         </div>
     </div>
 </body>
-<?php
-    session_start();
+<?php 
     if (isset($_POST['btnLogin'])) {
         $userEmail=$_POST['email'];
         $userPassword=$_POST['password'];
+        session_start();
         $_SESSION['email']=$userEmail;
         $_SESSION['password']=$userPassword;
         if ($_SESSION['email']=="admin@gmail.com" && $_SESSION['password']=="admin123") {
